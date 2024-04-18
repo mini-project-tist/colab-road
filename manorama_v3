@@ -1,0 +1,6 @@
+# Plotting the pie chart for title counts related to Kerala districts
+plt.figure(figsize=(8, 8))
+plt.pie(kerala_titles.values(), labels=kerala_titles.keys(), autopct='%1.1f%%', startangle=140)
+plt.title('Road accidents in Kerala Districts')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle
+plt.show()
