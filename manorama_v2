@@ -1,0 +1,17 @@
+# List of Kerala districts
+kerala_districts = ["thiruvananthapuram", "kollam", "pathanamthitta", "alappuzha",
+                    "kottayam", "idukki", "ernakulam", "thrissur", "palakkad",
+                    "malappuram", "kozhikode", "wayanad", "kannur", "kasaragod"]
+
+# Filter titles containing Kerala districts
+kerala_titles = {title: count for title, count in title_counts.items() if any(district.lower() in title.lower() for district in kerala_districts)}
+
+# Plotting the bar graph for title counts related to Kerala districts
+plt.figure(figsize=(10, 6))
+plt.bar(kerala_titles.keys(), kerala_titles.values(), color='skyblue')
+plt.xlabel('Districts')
+plt.ylabel('Count')
+plt.title('statistical representation of accidents in Kerala')
+plt.xticks(rotation=90, ha='right')
+plt.tight_layout()
+plt.show()
